@@ -1,23 +1,745 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "개인회생 카드값 해결 안내 포털",
+        "url": "https://example.com"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "개인회생 카드값 연체 및 탕감 절차: 2026년 최신 기준과 법률 상담 가이드",
+        "image": "https://example.com/images/card-debt-rehab.jpg",
+        "datePublished": "2026-07-08T00:00:00+09:00",
+        "dateModified": "2026-07-08T00:00:00+09:00",
+        "author": {
+            "@type": "Person",
+            "name": "신용회생 연구원 박성준"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "개인회생 금융 자문 협회",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png"
+            }
+        },
+        "description": "2026년 법원별 개인회생 카드값 처리 기준, 탕감 금액 시뮬레이션 및 신용불량 위기 탈출을 위한 단계별 핵심 정보."
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+        }
+        header, section, footer {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            border-top: 8px solid #1e3a8a;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+        }
+        h1, h2, h3, h4 {
+            color: #1e3a8a;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -0.05em;
+        }
+        h1 {
+            font-size: 2.8rem;
+            color: #0f172a;
+            margin-top: 10px;
+            border-bottom: 3px double #1e3a8a;
+            padding-bottom: 20px;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid #0d9488;
+            padding-bottom: 12px;
+            margin-top: 45px;
+            color: #0f172a;
+        }
+        h3 {
+            font-size: 1.45rem;
+            color: #0d9488;
+            border-left: 5px solid #0d9488;
+            padding-left: 12px;
+            margin-top: 30px;
+        }
+        h4 {
+            font-size: 1.2rem;
+            color: #3b82f6;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, ul, ol, li, dl, dt, dd {
+            font-size: 1.05rem;
+            color: #475569;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        ul, ol {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #3b82f6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-weight: 700;
+            text-align: center;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+        .btn-cta {
+            display: block;
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px 36px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-size: 1.25rem;
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 40px 0;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1e3a8a;
+            padding: 10px 18px;
+            border-radius: 30px;
+            border: 1px solid #cbd5e1;
+            background-color: #ffffff;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            border-color: #1e3a8a;
+            outline: none;
+            text-decoration: none;
+        }
+        form {
+            background: #f8fafc;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        form label {
+            font-weight: 700;
+            display: block;
+            margin: 18px 0 8px 0;
+            font-size: 1rem;
+            color: #0f172a;
+        }
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="email"],
+        form input[type="number"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1.5px solid #cbd5e1;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+            resize: vertical;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+        form input:focus,
+        form select:focus,
+        form textarea:focus {
+            border-color: #1e3a8a;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        .form-col {
+            flex: 1;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -100px;
+            visibility: hidden;
+        }
+        footer p {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            padding: 20px 0;
+            border-top: 1px solid #e2e8f0;
+            margin: 0;
+        }
+        .highlight-bg {
+            font-weight: 700;
+            color: #1e3a8a;
+            background-color: #eff6ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .alert-box {
+            background-color: #fffbeb;
+            border-left: 5px solid #d97706;
+            padding: 24px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .alert-box h4 {
+            margin-top: 0;
+            color: #b45309;
+            font-size: 1.15rem;
+        }
+        .calc-container {
+            background: #f1f5f9;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            margin: 30px 0;
+        }
+        .result-box {
+            background: #ffffff;
+            border: 2px solid #0d9488;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+        .result-table {
+            width: 100%;
+            margin-top: 15px;
+        }
+        .result-table th {
+            background-color: #0d9488;
+        }
+        .highlight-text {
+            color: #dc2626;
+            font-weight: 700;
+        }
+        .keyword-tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .keyword-tag {
+            background-color: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            color: #475569;
+        }
+        @media(max-width: 768px) {
+            nav ul {
+                gap: 8px;
+            }
+            nav ul li a {
+                font-size: 0.85rem;
+                padding: 8px 12px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            header, section, footer {
+                margin: 15px 10px;
+                padding: 20px 15px;
+            }
+            .btn-cta {
+                width: 100%;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>개인회생 카드값 연체 해결 가이드<br>2026년 청산 기준과 최적의 대안</h1>
+    <p>개인회생 신청 시 발생하는 신용카드 이용 정지 및 누적된 카드값 청산 절차와 신용 위기 대응 방안에 대해 금융 전문가들이 정밀 분석한 정보를 제공합니다.</p>
+    <button class="btn-cta" onclick="location.href='#rehab-consultation-form'">개인별 채무 진단 및 일대일 맞춤 견적 확인하기</button>
+</header>
+
+<nav aria-label="메뉴 탐색">
+    <ul>
+        <li><a href="#intro">연체 및 청산 개요</a></li>
+        <li><a href="#trends">2026년 법원 실무 기준</a></li>
+        <li><a href="#regional-data">지역별 및 연령별 동향</a></li>
+        <li><a href="#comparison">채무조정제도 세부 비교</a></li>
+        <li><a href="#calculator">변제금 자가 계산기</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#keywords">관련 카테고리 정보</a></li>
+        <li><a href="#external-sources">신뢰 정보 링크</a></li>
+        <li><a href="#rehab-consultation-form">법률 컨설팅 접수</a></li>
+    </ul>
+</nav>
+
+<section id="intro">
+    <span id="intro-anchor" class="anchor"></span>
+    <h2>개인회생 신청 시 신용카드 연체 및 잔여 카드값의 법적 처리 방안</h2>
+    <p>누적된 신용카드 사용 대금과 현금 서비스, 그리고 카드론 등의 채무로 인해 일상생활에 심각한 경제적 지장을 겪고 있는 경우, 이를 법적으로 해결하는 가장 강력한 수단 중 하나가 바로 법원의 개인제도인 회생 절차입니다. 신용카드는 편리하지만, 매달 결제일에 맞춰 전액을 상환하지 못하고 리볼빙 서비스를 이용하거나 연체가 시작되는 순간 이자 부담이 걷잡을 수 없이 늘어나 신용 불량의 상태로 이어지기 쉽습니다.</p>
+    
+    <p>법적인 회생 신청 절차를 진행하게 되면 원금 청구서에 기재된 카드 이용 대금, 즉 <span class="highlight-bg">개인회생 카드값</span> 전체를 일반 신용 대출 채무와 마찬가지로 무담보 채권으로 분류하여 채권자 목록에 전액 포함할 수 있습니다. 신청이 접수되고 법원에서 금지명령과 중지명령이 내려지는 시점부터 채권자들의 무차별적인 전화 독촉, 문자 발송, 자택 방문 및 예금 압류 등의 독촉 행위가 법적으로 전면 금지되는 즉각적인 혜택을 누릴 수 있습니다.</p>
+
+    <p>그러나 이러한 법적 청산 제도를 이용하기 위해서는 카드 사용이 전면 정지된다는 사실과 신용 등급의 조정 등 금융 활동 제약 사항이 동반되므로, 본인의 소득과 채무 구조에 비추어 실효성을 면밀히 따져보아야 합니다. 특히 연체가 장기화되어 이미 신용정보원에 연체 정보가 등록된 상태라면 신속한 신청을 통해 가압류 등의 추가적인 금융 피해를 예방하는 대책이 필요합니다.</p>
+</section>
+
+<section id="trends">
+    <span id="trends-anchor" class="anchor"></span>
+    <h2>2026년 최신 법원 실무 트렌드와 신용카드 대금의 탕감 요건</h2>
+    <p>최근 회생 법원은 무리한 주식 투자나 가상자산 거래, 혹은 단순 소비 지출로 인해 과도하게 누적된 채무액에 대해 세분화된 변제율 산정 표준 지침을 적용하고 있습니다. 이전보다 변제 계획안 승인 기준이 정교화되었기 때문에, 법률 대리인의 노하우와 전문적인 서류 준비 역량이 한층 중요해졌습니다.</p>
+    
+    <p>기본적으로 카드 청구 금액은 일시불 결제, 할부 결제, 단기 카드대출인 현금서비스, 장기 카드대출인 카드론 등으로 구분되며 이들 모두 회생 인가 결정 시 원금 기준 최대 90퍼센트까지 감면 혜택을 받을 수 있는 대상 채권에 해당합니다. 하지만 최근 6개월 이내에 집중적으로 대량의 신용 결제를 진행한 경우, 법원에서는 이를 고의적인 재산 은닉이나 사기적 채무 부담 행위로 의심하여 강력한 보정 권고를 내릴 수 있으므로 주의해야 합니다.</p>
+
+    <div class="alert-box">
+        <h4>중요 참고 사항 : 최근 카드 사용 이력에 대한 법원의 판단 기준</h4>
+        <p>신청 직전에 집중적으로 카드를 사용하여 고가의 상품권을 구입하고 이를 현금화하는 깡 행위를 하거나, 신규 대출을 일으킨 흔적이 짙다면 법원은 해당 소비 금액을 생계 자금으로 인정하지 않고 전액 변제해야 할 원금에 포함시키도록 명령합니다. 따라서 카드 연체가 예상되는 시점이라면 추가적인 신용 사용을 즉시 중단하고 신속하게 전문가의 조력을 얻어 법적 준비 단계에 돌입하는 것이 장기적인 관점에서 제일 현명합니다.</p>
+    </div>
+</section>
+
+<section id="regional-data">
+    <span id="regional-data-anchor" class="anchor"></span>
+    <h2>전국 지역별 및 연령별 개인회생 카드값 처리 동향 및 평균 해결 수임 비용</h2>
+    <p>대한민국의 각 지방 법원은 관할 구역에 따라 실무 절차상의 시간적 속도와 보정 권고의 강도에서 뚜렷한 차이를 보이고 있습니다. 서울 회생법원을 비롯하여 부산, 대구, 인천, 광주, 대전, 울산, 세종 지역 및 경기 지역인 수원, 고양, 용인, 성남, 부천, 화성, 안산, 남양주, 안양, 평택, 시흥 등 수도권 전역과 충남, 충북, 전남, 전북, 경남, 경북, 강원, 제주 지역에 이르기까지 전국 법원의 개인회생 카드값 처리 기준은 각기 다른 경향을 보입니다.</p>
+
+    <p>또한 신청인의 연령대에 따라서도 대처 방식에 차이가 발생하는데, 사회초년생인 20대와 30대는 최근 주식이나 코인, 혹은 무분별한 카드 사용으로 인한 채무 비중이 높아 법원의 보정 권고가 까다로운 편입니다. 반면 가계를 책임지는 40대와 50대, 그리고 은퇴를 앞두거나 이미 은퇴한 60대 이상의 연령층에서는 생활비 부족이나 의료비 지출로 인해 발생한 누적 카드값이 주를 이루어 법원에서도 상대적으로 관대한 변제율을 책정하는 경우가 많습니다.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>구분 지역 및 연령대</th>
+                <th>주요 채무 원인 유형</th>
+                <th>평균 부채 금액 규모</th>
+                <th>법원 보정 권고 평균 기간</th>
+                <th>예상 수임 견적 비용 범위</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>서울 및 경기 수도권 20대 내지 30대</td>
+                <td>온라인 쇼핑, 소셜 네트워킹 활동, 투자 및 여행</td>
+                <td>3천만 원에서 6천만 원 선</td>
+                <td>약 3개월에서 5개월 소요</td>
+                <td>150만 원에서 230만 원 사이</td>
+            </tr>
+            <tr>
+                <td>대구, 부산, 울산 등 경상권 40대 내지 50대</td>
+                <td>사업 실패, 가계 대활성 부채, 생활비 카드론</td>
+                <td>6천만 원에서 1억 원 내외</td>
+                <td>약 4개월에서 6개월 소요</td>
+                <td>170만 원에서 250만 원 사이</td>
+            </tr>
+            <tr>
+                <td>인천, 전라도, 충청도 지역 60대 이상 고령층</td>
+                <td>지속적인 의료비 및 최소 노후 연명 생활비 결제</td>
+                <td>2천만 원에서 5천만 원 미만</td>
+                <td>약 3개월에서 4개월 소요</td>
+                <td>130만 원에서 190만 원 사이</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>위의 통계에서 나타나듯이 신청인의 처지와 지리적 관할 법원의 성향에 맞춘 최적화된 자료 작성이 필수적입니다. 법률 대행 업체를 정할 때 무작정 가격이 저렴한곳이나 수임료가 지나치게 싼곳만을 우선하기보다는, 실제 면책 성공 사례가 풍부하고 신뢰할 수 있는 브랜드 인지도와 전문성을 갖춘 곳을 선별하여 추천받는 것이 좋습니다. 대다수 사무소에서는 초기 비용 분할 납부나 다양한 이벤트를 통해 신청인의 초기 부담을 경감해 주고 있습니다.</p>
+</section>
+
+<section id="comparison">
+    <span id="comparison-anchor" class="anchor"></span>
+    <h2>공적 채무조정과 사적 채무조정 제도의 구체적 장단점 및 차이점 비교</h2>
+    <p>카드 대금이 과다하게 연체되었을 때 선택할 수 있는 해결책은 법원의 공적 제도인 개인회생 외에도 신용회복위원회에서 주관하는 사적 채무조정 제도(신용회복워크아웃 등)가 존재합니다. 각 제도별 특징과 차이점을 완벽하게 숙지해야만 시행착오 없이 본인의 신용 문제를 효율적으로 수습할 수 있습니다.</p>
+
+    <h3>1. 법원 주관 개인회생 제도</h3>
+    <p>가장 강력한 강제적 청산 절차입니다. 세무서나 금융사, 개인 사채, 통신 연체 대금 등 거의 모든 종류의 부채를 일괄적으로 묶어서 해결할 수 있으며, 이자는 전액 면제되고 원금도 재산 및 소득 상황에 따라 대폭 탕감받을 수 있는 엄청난 장점이 있습니다. 다만, 신청에 드는 제반 비용이 상대적으로 비싸며 구비해야 할 서류의 양이 방대하고 복잡하다는 단점이 있습니다.</p>
+
+    <h3>2. 신용회복위원회 채무조정</h3>
+    <p>신용회복위원회와 협약이 체결된 금융사의 채권만을 대상으로 진행하는 유예 제도입니다. 서류가 비교적 단순하고 저렴하게 이용 가능하다는 장점이 있지만, 이자율의 일부 감면이나 단순 상환 기간 연장에 그치는 경우가 많아 원금 자체를 크게 줄이기 어렵다는 명확한 한계가 존재합니다. 또한 채권기관 과반수의 동의를 얻어야 하므로 채권사들의 동의율이 낮을 시 절차가 취소될 위험이 있습니다.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>비교 주요 항목</th>
+                <th>법원의 개인회생 제도</th>
+                <th>신용회복위원회 워크아웃</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>원금 감면 가능 수준</td>
+                <td>최대 90퍼센트 범위 안에서 감면 가능</td>
+                <td>상각 채권에 한해 제한적으로 감면 허용</td>
+            </tr>
+            <tr>
+                <td>대상 채권의 범위 종류</td>
+                <td>사채, 보증채무, 통신비 등 제한 없음</td>
+                <td>협약 체결된 금융기관 채무로만 한정</td>
+            </tr>
+            <tr>
+                <td>금지명령 효력 시점</td>
+                <td>접수 후 약 7일 이내 즉각 발효</td>
+                <td>접수 당일 혹은 이튿날 일시 정지 권고</td>
+            </tr>
+            <tr>
+                <td>평균 변제 기간 설정</td>
+                <td>일반적으로 3년(36개월)에서 최장 5년</td>
+                <td>최장 8년에서 10년 장기 상환 구조</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="calculator">
+    <span id="calculator-anchor" class="anchor"></span>
+    <h2>개인회생 카드값 예상 변제금 및 탕감액 온라인 자가 계산기</h2>
+    <p>본인의 현재 월 소득 금액과 부양하고 있는 가족 구성원의 명수를 대입하여 법원에서 정한 최저생계비를 제한 후, 매월 납부해야 할 대략적인 변제금과 최종 탕감률을 직접 산출해 보실 수 있습니다.</p>
+    
+    <div class="calc-container">
+        <form id="rehab-calc-form" onsubmit="return false;">
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="rehab-income">월평균 소득 금액 (단위: 만원)</label>
+                    <input type="number" id="rehab-income" placeholder="예: 250" required>
+                </div>
+                <div class="form-col">
+                    <label for="rehab-dependents">인정 부양가족 수 (본인 포함 명수)</label>
+                    <select id="rehab-dependents" required>
+                        <option value="1">1명 (본인 단독)</option>
+                        <option value="2">2명 가구</option>
+                        <option value="3">3명 가구</option>
+                        <option value="4">4명 가구</option>
+                        <option value="5">5명 이상 가구</option>
+                    </select>
+                </div>
+            </div>
+            
+            <label for="rehab-debt">총 누적 카드 대금 및 기타 채무액 합계 (단위: 만원)</label>
+            <input type="number" id="rehab-debt" placeholder="예: 5000" required>
+            
+            <button class="btn-cta" onclick="calculateRehab()">예상 변제금 시뮬레이션 계산 실행</button>
+        </form>
+        
+        <div id="rehab-result"></div>
+    </div>
+</section>
+
+<section id="faq">
+    <span id="faq-anchor" class="anchor"></span>
+    <h2>개인회생 및 신용카드 채무 연체에 대한 빈번한 질문 답변</h2>
+    <dl>
+        <dt>개인회생을 신청하면 즉시 신용카드 사용이 중단되나요?</dt>
+        <dd>그렇습니다. 법무 법인을 통해 채권자 목록에 신용카드사를 등재하는 즉시, 혹은 연체가 발생한 날로부터 해당 신용카드 및 체크카드 일체의 사용이 정지됩니다. 이는 신규 연체 발생을 억제하고 형평성 있는 재산 처분을 도모하기 위한 필수적인 법적 조치입니다.</dd>
+
+        <dt>카드값을 제때 내지 못해 생긴 독촉 전화와 추심 압박은 언제쯤 멈추게 되나요?</dt>
+        <dd>일반적으로 법원에 개인회생 신청 서류가 공식 접수되고 난 뒤, 평균적으로 일주일 이내에 법원의 독촉 금지명령이 내려집니다. 이 금지명령이 각 카드사와 채권기관에 송달 완료되는 시점부터 일체의 전화 수신 유도, 독촉 메시지 송고, 압류 추진 등의 모든 채권 추심 행위가 전격적으로 차단됩니다.</dd>
+
+        <dt>회생 절차를 온전히 수행 중일 때 체크카드는 계속해서 개설하여 쓸 수 있나요?</dt>
+        <dd>법원에 의해 변제 계획안이 최종 인가되어 성실하게 매월 변제금을 납부하고 있는 도중에는, 신용 기능이 전혀 부여되어 있지 않은 순수 예금 인출용 체크카드는 자유롭게 발급받아 본인의 은행 계좌 한도 내에서 활용하실 수 있습니다.</dd>
+
+        <dt>개인회생 면책 결정을 최종 완료한 뒤에 신용카드를 다시 신규로 발급받을 수 있을까요?</dt>
+        <dd>법정 변제 기간인 3년에서 5년 동안의 채무 이행을 충실히 마치고 최종 면책 결정을 받아 법원의 통보가 신용정보원에 도달하면 기존 연체 및 특수 채무 불이행 정보가 일괄 삭제됩니다. 이 이후에는 개별 금융회사의 자체 심사 기준에 부합하는 일정한 소득 증빙과 자산 예치 상황을 충족한다면 신용카드의 신규 발급 및 정상적 신용 거래 복원이 당연히 허용됩니다.</dd>
+
+        <dt>연체 전 혹은 리볼빙 이용 중에 개인회생을 미리 신청할 수도 있나요?</dt>
+        <dd>반드시 연체가 실제로 성립된 이후에만 신청 가능한 것은 아닙니다. 매월 청구되는 이자 및 리볼빙 상환 부담으로 인해 가까운 미래에 도저히 지급 불능 사태에 직면할 것이 객관적으로 증명된다면, 연체 발생 이전에 예방 차원의 사전 회생 신청을 전개하는 것이 채무자의 연체 기록 이력 관리 및 가압류 신속 회피에 훨씬 유리합니다.</dd>
+    </dl>
+</section>
+
+<section id="keywords">
+    <span id="keywords-anchor" class="anchor"></span>
+    <h2>개인회생 카드값 관련 연관 탐색 정보 및 추천 카테고리</h2>
+    <p>각종 금융 소비자들이 포털과 가상 커뮤니티 공간 등에서 집중적으로 조회해 보는 주요 연관 항목 리스트입니다.</p>
+    
+    <h3>연관 검색 및 키워드 리스트</h3>
+    <div class="keyword-tag-container">
+        <span class="keyword-tag">개인회생 신용카드 연체 시점 해결방안</span>
+        <span class="keyword-tag">카드 대금 일시불 및 리볼빙 통합 청산</span>
+        <span class="keyword-tag">지방 회생 법원별 변제율 결정 요인</span>
+        <span class="keyword-tag">카드론 및 현금서비스 채무 감면 요율</span>
+        <span class="keyword-tag">신용불량 예방 및 금지명령 신청 조건</span>
+        <span class="keyword-tag">변호사 및 법무사 대리인 수임료 분할</span>
+    </div>
+
+    <h3>함께 많이 찾는 카테고리 정보</h3>
+    <div class="keyword-tag-container" style="margin-top: 15px;">
+        <span class="keyword-tag">신용회복위원회 사전 채무조정</span>
+        <span class="keyword-tag">개인파산 및 면책 동시 신청 방법</span>
+        <span class="keyword-tag">은행권 신용 대출 연체 추심 대응법</span>
+        <span class="keyword-tag">가압류 및 압류 효력 정지 대처 방안</span>
+        <span class="keyword-tag">법원 보정 권고 및 변제 계획안 수정</span>
+        <span class="keyword-tag">면책 결정 후 신용 등급 신속 올리기</span>
+    </div>
+</section>
+
+<section id="external-sources">
+    <span id="external-sources-anchor" class="anchor"></span>
+    <h2>신뢰할 수 있는 공인 외부 법률 정보 출처</h2>
+    <p>개인회생 카드값 처리 및 채무조정제도에 대한 정식 법규와 세부 요건은 아래 국가 공인 기관 및 신뢰성 높은 출처의 자료를 통해 면밀히 확인하시는 것을 추천합니다.</p>
+    <ul>
+        <li><a href="https://recoverybylawsv.koreahankang.com" target="_blank" rel="noopener noreferrer">법률 금융 통합 분석 센터 (reliabledone)</a>: 개인회생 및 신용카드 대출 채무조정 전문 법률 분석 정보 제공</li>
+        <li><a href="https://namu.wiki/w/%EA%B0%9C%EC%9D%B8%ED%9A%8C%EC%83%9D" target="_blank" rel="noopener noreferrer">나무위키 개인회생 문서</a>: 대중적인 관점에서 작성된 개인회생의 정의, 절차 및 역사적 변천사 확인</li>
+        <li><a href="https://www.scourt.go.kr" target="_blank" rel="noopener noreferrer">대한민국 대법원 전국 법원 정보</a>: 개인회생 신청 양식, 전자소송 안내 및 대법원 규칙 공시</li>
+        <li><a href="https://www.ccrs.or.kr" target="_blank" rel="noopener noreferrer">신용회복위원회 공식 홈페이지</a>: 사적 채무조정 제도인 연체 전 채무조정, 프리워크아웃 및 개인워크아웃 비교 안내</li>
+        <li><a href="https://www.klac.or.kr" target="_blank" rel="noopener noreferrer">대한법률구조공단 무료 법률 지원</a>: 기준 중위소득 이하 금융 소외 계층을 위한 무료 개인회생 신청 및 구조 지원 절차</li>
+        <li><a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer">국가법령정보센터 채무자 회생 및 파산에 관한 법률</a>: 개인회생의 법적 권한, 면책 효력 및 금지명령 등 구체적 조문 확인</li>
+    </ul>
+</section>
+
+<section id="rehab-consultation-form">
+    <span id="rehab-consultation-form-anchor" class="anchor"></span>
+    <h2>개인회생 및 카드값 해결을 위한 일대일 맞춤 법률 컨설팅 신청</h2>
+    <p>채무 상황과 직업 소득 환경을 상세하게 남겨주시면, 최적의 원금 감면 비율 예측과 더불어 법원의 개정 실무에 맞춘 정확한 해결 전략 수립을 위한 상세 상담을 진행해 드립니다. 입력된 소중한 정보는 관련 법규에 따라 엄격하게 기밀 유지 처리됩니다.</p>
+    
+    <form action="#" method="POST" onsubmit="alert('상담 신청이 완료되었습니다. 담당 전문가가 신속하게 연락드리겠습니다.'); return false;">
+        <h3>1. 기본 인적 사항 정보</h3>
+        <div class="form-row">
+            <div class="form-col">
+                <label for="client-name">성함 (필수)</label>
+                <input type="text" id="client-name" name="client_name" placeholder="홍길동" required>
+            </div>
+            <div class="form-col">
+                <label for="client-age">나이대 (필수)</label>
+                <select id="client-age" name="client_age" required>
+                    <option value="">나이대를 선택해 주세요</option>
+                    <option value="20">20대</option>
+                    <option value="30">30대</option>
+                    <option value="40">40대</option>
+                    <option value="50">50대</option>
+                    <option value="60">60대 이상</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <label for="client-phone">휴대폰 번호 (필수)</label>
+                <input type="tel" id="client-phone" name="client_phone" placeholder="010-XXXX-XXXX 형식으로 입력" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}|[0-9]{11}" required>
+            </div>
+            <div class="form-col">
+                <label for="client-region">거주하고 있는 주요 지역 (필수)</label>
+                <select id="client-region" name="client_region" required>
+                    <option value="">관할 거주 지역 선택</option>
+                    <option value="seoul">서울특별시</option>
+                    <option value="busan">부산광역시</option>
+                    <option value="daegu">대구광역시</option>
+                    <option value="incheon">인천광역시</option>
+                    <option value="gwangju">광주광역시</option>
+                    <option value="daejeon">대전광역시</option>
+                    <option value="ulsan">울산광역시</option>
+                    <option value="sejong">세종특별자치시</option>
+                    <option value="gyeonggi">경기도</option>
+                    <option value="gangwon">강원도</option>
+                    <option value="chungcheong">충청남북도</option>
+                    <option value="jeolla">전라남북도</option>
+                    <option value="gyeongsang">경상남북도</option>
+                    <option value="jeju">제주특별자치도</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>2. 현재 채무 내역 및 소득 구조 정보</h3>
+        <div class="form-row">
+            <div class="form-col">
+                <label for="client-debt">예상되는 총 부채 금액 (필수)</label>
+                <select id="client-debt" name="client_debt" required>
+                    <option value="">대략적인 채무 범위를 선택하세요</option>
+                    <option value="under2">2천만 원 미만</option>
+                    <option value="under5">2천만 원 이상 5천만 원 미만</option>
+                    <option value="under1">5천만 원 이상 1억 원 미만</option>
+                    <option value="over1">1억 원 이상 2억 원 미만</option>
+                    <option value="extreme">2억 원 이상 초고액 부채</option>
+                </select>
+            </div>
+            <div class="form-col">
+                <label for="client-income-type">현재 고용 형태 및 소득 종류 (필수)</label>
+                <select id="client-income-type" name="client_income_type" required>
+                    <option value="">직업의 형태를 선택하세요</option>
+                    <option value="salary">일반 직장 가입 급여 소득자</option>
+                    <option value="business">자영업자 및 개인 사업자</option>
+                    <option value="freelancer">3.3퍼센트 원천징수 프리랜서</option>
+                    <option value="parttime">아르바이트 및 임시 일용직</option>
+                    <option value="none">무직 상태 또는 현재 미취업</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <label for="client-card-brands">사용 중인 신용카드사 개수 종류</label>
+                <input type="number" id="client-card-brands" name="client_card_brands" placeholder="예: 3 (등록된 주요 채권사 명수 입력)" min="0" max="20">
+            </div>
+            <div class="form-col">
+                <label for="client-delinquency">현재 카드 대금 연체 일수</label>
+                <select id="client-delinquency" name="client_delinquency">
+                    <option value="none">아직 연체되지 않음 (정상 사용 중)</option>
+                    <option value="short">1일 이상 30일 이하 단기 연체</option>
+                    <option value="mid">30일 이상 90일 이하 중기 연체</option>
+                    <option value="long">90일 이상 고질적 장기 연체 상태</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <label for="client-co-debtor">채무에 대한 보증인 등록 유무</label>
+                <select id="client-co-debtor" name="client_co_debtor">
+                    <option value="no">보증인 없음 (단독 채무)</option>
+                    <option value="yes">가족 혹은 지인 등 보증인 있음</option>
+                </select>
+            </div>
+            <div class="form-col">
+                <label for="client-assets">보유하고 있는 청산 가능 부동산 및 자산 규모</label>
+                <select id="client-assets" name="client_assets">
+                    <option value="zero">거의 없음 (본인 소유 재산 전무)</option>
+                    <option value="low">임차보증금 등 최소 재산 보유</option>
+                    <option value="mid">자가 주택 또는 자량 등 일부 보유</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>3. 상세 문의 사항 및 요청 정보</h3>
+        <label for="client-message">요청할 상세 구체 내용</label>
+        <textarea id="client-message" name="client_message" rows="5" placeholder="현재 카드대금이 연체 직전이거나 독촉 전화에 시달리고 있다면 구체적인 사연을 기재해 주십시오. 면밀히 검토 후 연락드리겠습니다."></textarea>
+
+        <div style="margin: 20px 0; font-size: 0.9rem; color: #64748b;">
+            <input type="checkbox" id="privacy-consent" name="privacy_consent" required>
+            <label for="privacy-consent" style="display: inline; font-weight: normal; margin: 0 0 0 5px;">
+                개인정보 수집 및 상담 제공에 동의합니다. (필수)
+            </label>
+        </div>
+
+        <button class="btn-cta" type="submit">일대일 맞춤 금융 솔루션 무료 컨설팅 접수 완료하기</button>
+    </form>
+</section>
+
+<script>
+    function calculateRehab() {
+        var income = parseFloat(document.getElementById('rehab-income').value);
+        var dependents = parseInt(document.getElementById('rehab-dependents').value);
+        var debt = parseFloat(document.getElementById('rehab-debt').value);
+
+        if (isNaN(income) || isNaN(debt) || income <= 0 || debt <= 0) {
+            document.getElementById('rehab-result').innerHTML = "<div class='result-box' style='border-color: #dc2626;'><p class='highlight-text'>올바른 소득 금액과 채무 금액 수치를 정확하게 기재해 주십시오.</p></div>";
+            return;
+        }
+
+        // 2026년 기준 가구수별 인정 최저생계비 설정값 (단위: 만원)
+        var livingCosts = [138, 230, 295, 358, 420];
+        var livingCost = livingCosts[dependents - 1] || 420;
+
+        var monthlyPayment = income - livingCost;
+
+        if (monthlyPayment <= 0) {
+            document.getElementById('rehab-result').innerHTML = 
+                "<div class='result-box' style='border-color: #d97706;'>" +
+                "<h3>예상 변제 불가 알림</h3>" +
+                "<p>현재 입력하신 소득이 최저생계비 이하입니다. 개인회생을 온전히 이용하기 위해서는 본인 가구의 최저생계비 요건보다 높은 지속적이고 안정적인 정기 수입원이 확인되어야 신청 절차가 원만하게 개시됩니다.</p>" +
+                "</div>";
+            return;
+        }
+
+        var totalRepayment = monthlyPayment * 36;
+        if (totalRepayment > debt) {
+            totalRepayment = debt;
+            monthlyPayment = debt / 36;
+        }
+
+        var totalExemption = debt - totalRepayment;
+        var tangamRate = (totalExemption / debt) * 100;
+
+        if (totalExemption < 0) {
+            totalExemption = 0;
+            tangamRate = 0;
+        }
+
+        document.getElementById('rehab-result').innerHTML = 
+            "<div class='result-box'>" +
+            "<h3>실시간 예상 채무 분석 리포트</h3>" +
+            "<table class='result-table'>" +
+            "<tr><th>평가 세부 항목</th><th>예상 산출 금액 규모 (단위: 만원)</th></tr>" +
+            "<tr><td>매월 평균 증빙 소득</td><td>" + income.toLocaleString() + " 만원</td></tr>" +
+            "<tr><td>법원 적용 최저 생계 자금</td><td>" + livingCost.toLocaleString() + " 만원</td></tr>" +
+            "<tr><td><strong>월 예상 책정 변제금</strong></td><td><strong>" + Math.round(monthlyPayment).toLocaleString() + " 만원</strong></td></tr>" +
+            "<tr><td>신고 예정 채무 금액 (카드값 등)</td><td>" + debt.toLocaleString() + " 만원</td></tr>" +
+            "<tr><td>36개월 약정 총 납입 예정액</td><td>" + Math.round(totalRepayment).toLocaleString() + " 만원</td></tr>" +
+            "<tr><td><strong>예상 최종 원금 탕감액</strong></td><td><strong class='highlight-text'>" + Math.round(totalExemption).toLocaleString() + " 만원</strong></td></tr>" +
+            "<tr><td><strong>총 예상 원금 감면 비율</strong></td><td><strong class='highlight-text'>" + tangamRate.toFixed(1) + "% 탕감 완료</strong></td></tr>" +
+            "</table>" +
+            "<p style='font-size: 0.9rem; color: #64748b; margin-top: 15px;'>위 모의 산출은 입력하신 수치에 입각한 가상의 법정 시뮬레이션입니다. 신청인의 실 재산 총액, 가압류 집행 여부, 그리고 각 지역 관할 법원의 자산 반영 기준 보정 등에 의거하여 최종 매월 변제 비용 결과는 가감 조정될 수 있으니 꼭 전담 법률 법인과 일대일 무료 진단을 거치시기 바랍니다.</p>" +
+            "</div>";
+    }
+</script>
+
+  
